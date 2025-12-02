@@ -1,2 +1,29 @@
-// Added feature 1
-//Tomcat-4
+pipeline {
+  agent any
+  stages {   
+   stage(‘clone project’) {
+      steps {
+           git branch:'master' , url:''
+       }
+   }
+   stage('clean') {
+      steps {
+           sh 'mvn clean'
+       }
+   }
+   stage('compile') {
+      steps {
+           sh 'mvn compile'
+       }
+   }
+   stage('test') {
+      steps {
+           sh 'mvn test'
+       }
+   }
+   stage('build') {
+      steps {
+           sh 'mvn clean install'
+       }
+   }
+}
