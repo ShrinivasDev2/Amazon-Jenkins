@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {   
-   stage(‘clone project’) {
+   stage('clone project') {
       steps {
            git branch:'master' , url:'https://github.com/ShrinivasDev2/Amazon-Jenkins.git'
        }
