@@ -3,7 +3,7 @@ pipeline {
   stages {   
    stage(‘clone project’) {
       steps {
-           git branch:'master' , url:''
+           git branch:'master' , url:'https://github.com/ShrinivasDev2/Amazon-Jenkins.git'
        }
    }
    stage('clean') {
